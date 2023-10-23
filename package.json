@@ -1,0 +1,19 @@
+{
+  "name": "rstream-w",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": "^21.0.0",
+    "npm": "^10.0.0"
+  },
+  "devDependencies": {
+    "@thi.ng/rstream": "^8.2.1",
+    "esbuild": "^0.19.5",
+    "vue": "*"
+  },
+  "scripts": {
+    "app": "esbuild src/app.js src/store.js --format=esm --watch --bundle --outdir=www --servedir=www --serve=9000 --define:process.env.NODE_ENV='production'",
+    "build": "esbuild src/app.js src/store.js --format=esm --bundle --outdir=dist --define:process.env.NODE_ENV='production'"
+  }
+}
